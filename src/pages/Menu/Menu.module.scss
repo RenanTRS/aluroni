@@ -1,5 +1,7 @@
 @import '../../style/variables';
+//@import '/src/style/variables';
 @import '../../style/breakpoints';
+//@import '/src/style/breakpoints';
 
 .menu{
     padding: 20px, $padding-horizontal;
@@ -57,5 +59,14 @@
         color: $dark;
         font-size: 3rem;
         margin-bottom: 30px;
+    }
+
+    &__filtros {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        width: 100%;
     }
 }
