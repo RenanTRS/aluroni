@@ -5,10 +5,12 @@ import { Search } from './Search'
 import { useState } from 'react'
 import { Filtros } from './Filtros'
 import { Ordenador } from './Ordenador'
+import { Itens } from './Itens'
 
 export const Menu = () => {
     const [search, setSearch] = useState('')
     const [filtro, setFiltro] = useState<number | null>(null)
+    const [order, setOrder] = useState("")
     return (
         <main>
             <nav className={styles.menu}>
@@ -23,8 +25,9 @@ export const Menu = () => {
                 <Search search={search} setSearch={setSearch}/>
                 <div className={styles.cardapio__filtros}>
                     <Filtros filtro={filtro} setFiltro={setFiltro} />
-                    <Ordenador />
+                    <Ordenador order={order} setOrder={setOrder} />
                 </div>
+                <Itens />
             </section>
         </main>
     )
