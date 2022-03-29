@@ -27,7 +27,7 @@ export const Menu = () => {
                     <Filtros filtro={filtro} setFiltro={setFiltro} />
                     <Ordenador order={order} setOrder={setOrder} />
                 </div>
-                <Itens />
+                <Itens search={search} filtro={filtro} order={order}/>
             </section>
         </main>
     )
