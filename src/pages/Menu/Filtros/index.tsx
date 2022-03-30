@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react'
 import filtros from './filtros.json'
 import style from './Filtros.module.scss'
 import classNames from 'classnames'
@@ -12,24 +12,24 @@ interface Props {
 
 export const Filtros = ({filtro, setFiltro}: Props) => {
     
-    const selecionarFiltro = (opcao: IOpcao) => {
-        if (filtro === opcao.id) return setFiltro(null)
-        setFiltro(opcao.id)
-    }
+  const selecionarFiltro = (opcao: IOpcao) => {
+    if (filtro === opcao.id) return setFiltro(null)
+    setFiltro(opcao.id)
+  }
     
-    return (
-        <div className={style.filtros}>
-            {filtros?.map((opcao) => {
-                return(
-                    <button className={classNames({
-                        [style.filtros__filtro]: true,
-                        [style["filtros__filtro--ativo"]]: filtro === opcao.id
-                    })} key={opcao.id} onClick={() => selecionarFiltro(opcao)}>
-                        {opcao.label}
-                    </button>
-                )
-            })
-            }
-        </div>
-    )
+  return (
+    <div className={style.filtros}>
+      {filtros?.map((opcao) => {
+        return(
+          <button className={classNames({
+            [style.filtros__filtro]: true,
+            [style['filtros__filtro--ativo']]: filtro === opcao.id
+          })} key={opcao.id} onClick={() => selecionarFiltro(opcao)}>
+            {opcao.label}
+          </button>
+        )
+      })
+      }
+    </div>
+  )
 }

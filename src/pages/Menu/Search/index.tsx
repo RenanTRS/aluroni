@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from 'react'
 import style from './Search.module.scss'
 import {CgSearch} from 'react-icons/cg'
 
@@ -7,10 +7,10 @@ interface Props {
     setSearch: Dispatch<SetStateAction<string>>;
 }
 export const Search = ({search, setSearch}: Props) => {
-    return (
-        <div className={style.buscador}>
-            <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Buscar"/>
-            <CgSearch size={20} color="#4c4d5e"/>
-        </div>
-    )
+  return (
+    <div className={style.buscador}>
+      <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Buscar"/>
+      <CgSearch size={20} color="#4c4d5e"/>
+    </div>
+  )
 }
