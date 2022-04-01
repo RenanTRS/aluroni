@@ -1,6 +1,7 @@
 import style from './Item.module.scss'
-import logoImg from 'assets/img/logo.svg'
-import cardapio from '../itens.json'
+//import logoImg from 'assets/img/logo.svg'
+//import cardapio from '../itens.json'
+import cardapio from 'data/cardapio.json'
 import classNames from 'classnames'
 
 type Props = typeof cardapio[0]
@@ -28,10 +29,10 @@ export const Item = (props: Props) => {
             {size}g
           </div>
           <div className={style.item__qtdpessoas}>
-                        Serve {serving} pessoa{serving == 1 ? '' : 's'}
+            Serve {serving} pessoa{serving == 1 ? '' : 's'}
           </div>
           <div className={style.item__valor}>
-                        R$ {price.toFixed(2)}
+            R$ {price.toFixed(2)}
           </div>
         </div>
       </div>
