@@ -1,11 +1,13 @@
 import style from './Item.module.scss'
 import { Prato } from 'types/Prato'
 import { TagsPratos } from 'components/TagsPratos'
+import { useNavigate } from 'react-router-dom'
 
 export const Item = (props: Prato) => {
-  const {title, description, photo} = props
+  const {id, title, description, photo} = props
+  const navigate = useNavigate()
   return (
-    <div className={style.item}>
+    <div className={style.item} onClick={() => navigate(`/prato/${id}`)}>
       <div className={style.item__image}>
         <img src={photo} alt={title} />
       </div>
