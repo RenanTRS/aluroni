@@ -1,4 +1,6 @@
 import styles from './Cardapio.module.scss'
+import styleTema from 'style/Tema.module.scss'
+
 import { Search } from './Search'
 import { useState } from 'react'
 import { Filtros } from './Filtros'
@@ -10,10 +12,10 @@ export const Cardapio = () => {
   const [search, setSearch] = useState('')
   const [filtro, setFiltro] = useState<number | null>(null)
   const [order, setOrder] = useState('')
-  
+
   return (
     <section className={styles.cardapio}>
-      <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+      <h3 className={styleTema.titulo}>Cardápio</h3>
       <Search search={search} setSearch={setSearch}/>
       <div className={styles.cardapio__filtros}>
         <Filtros filtro={filtro} setFiltro={setFiltro} />

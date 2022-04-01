@@ -1,0 +1,32 @@
+@import '/src/style/variables';
+
+.sobreNos {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+  &__texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: justify;
+  p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+  }
+}
+}
+.imagens {
+  display: flex;
+  //flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  &__imagem {
+    max-width: 600px;
+    img {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+}

@@ -1,4 +1,6 @@
 import style from './PaginaPadrao.module.scss'
+import styleTema from 'style/Tema.module.scss'
+
 import {Outlet} from 'react-router-dom'
 
 export const PaginaPadrao = () => {
@@ -9,7 +11,7 @@ export const PaginaPadrao = () => {
           A casa do código e da massa
         </div>
       </header>
-      <div>
+      <div className={styleTema.container}>
         <Outlet />
       </div>
     </>
